@@ -27,12 +27,13 @@ public class askScreen {
     public void init() {
         Container cp =  window.getContentPane();
         JPanel panel = new JPanel();
-        cp.add(BorderLayout.SOUTH,panel);
+        cp.add(BorderLayout.NORTH,panel);
 
         panel.setPreferredSize(new Dimension(400,400));
         panel.setLayout(new GridLayout(2,1));
+        panel.add( display);
         panel.add(tryAgainButton);
-        panel.add(display);
+
 
         tryAgainButton.addActionListener(e -> {
             window.getContentPane().removeAll();
